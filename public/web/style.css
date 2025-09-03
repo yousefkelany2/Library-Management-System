@@ -1,0 +1,665 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    background-color: #eeeeee;
+}
+:root{
+    --main-color:#0167f3;
+    --trans-transition:0.5s;
+    --trans2-transition:1s;
+}
+i{
+    cursor: pointer;
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.custom-red {
+    background-color: red !important;
+    color: white !important;
+    border: none;
+}
+
+.container{
+    width: 90%;
+    margin: 100px auto;
+
+}
+.main-tittle{
+    text-align: center;
+    font-size: 43px;
+    color: var(--main-color);
+    margin: 20px 0;
+}
+/* open navbar */
+nav{
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+}
+nav .logo{
+    display: flex;
+    gap: 15px;
+    color: var(--main-color);
+    align-items: center;
+}
+nav .logo h2{
+    font-weight: normal;
+    font-size: 25px;
+
+}
+nav .logo i{
+    font-size: 30px;
+    color: var(--main-color);
+
+}
+nav .items ul{
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    font-size: 22px;
+
+}
+
+nav .items a{
+    color: var(--main-color);
+    padding-bottom: 5px;
+    border-bottom: solid 2px transparent;
+    transition: var(--trans-transition);
+      text-decoration: none;
+    letter-spacing: 1px;
+
+}
+nav .items a:hover{
+    border-bottom: solid 2px var(--main-color);
+    color: #0867d2;
+
+}
+nav .icons{
+    display: flex;
+    gap: 20px;
+    font-size: 25px;
+    color: var(--main-color);
+
+}
+nav .sun{
+    display: none;
+    animation: sun infinite 2s;
+}
+html{
+    scroll-behavior: smooth;
+}
+nav .up{
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+    position: fixed;
+    z-index: 700;
+    bottom: 30px;
+    right: 30px;
+}
+@keyframes sun {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+nav .nav-search{
+    background-color: #cccccc;
+    position: absolute;
+    left: 0;
+    opacity: 0.7;
+    z-index: 400;
+    top: -400px;
+    width: 100%;
+    height: 400px;
+    transition: var(--trans2-transition);
+
+}
+nav .nav-search.open{
+    top:0;
+}
+nav .nav-search .searchX{
+    right: 80px;
+    position: absolute;
+    top: 50px;
+    font-size:35px;
+
+}
+nav .nav-search input{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 500px;
+    padding: 20px 5px 20px 35px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border: solid 2px transparent;
+    color: gray;
+    border-radius: 8px;
+    transition: var(--trans-transition);
+}
+nav .nav-search input:hover{
+    border: solid 2px var(--main-color);
+}
+nav .nav-search .childSearch{
+    position: absolute;
+    top: 50%;
+    left: 33%;
+    font-size: 23px;
+    transform: translate(-33%,-50%);
+
+}
+nav .login{
+    background-color: #cccccc;
+    position: absolute;
+    left: 0;
+    z-index: 400;
+   /*  opacity: 0.7; */
+    top: -500px;
+    width: 100%;
+    text-align: center;
+    height: 500px;
+
+    transition: var(--trans2-transition);
+
+}
+nav .login.open{
+  top: 0;
+}
+nav .login .loginX{
+    position: absolute;
+    top: 25px;
+    right: 80px;
+    font-size: 35px;
+
+}
+nav .login form{
+    position: absolute;
+    left: 50%;
+
+
+    top: 40%;
+    transform: translate(-50%,-40%);
+    background-color: #eeeeee;
+    width: 40%;
+    height: 350px;
+
+
+}
+nav .login form h1{
+    color: var(--main-color);
+    font-size: 32px;
+    margin: 30px ;
+
+}
+nav .login form label{
+    display: block;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+nav .login form input{
+    width: 70%;
+    outline: none;
+    border: none;
+    padding: 13px ;
+    border-radius: 8px;
+    color: gray;
+    border: solid 2px transparent ;
+    font-size: 17px;
+    margin-bottom: 15px;
+    transition: var(--trans-transition);
+}
+nav .login form input:hover{
+    border: solid 2px var(--main-color) ;
+
+}
+nav .login form i{
+    position: absolute;
+    font-size: 22px;
+    right: 15%;
+    top: 78%;
+    transform: translate(-15%,-78%);
+    color: var(--main-color);
+
+}
+nav .login form .hide{
+    display: none;
+}
+/* close navbar */
+
+/* start header */
+header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+   margin-left: 150px;
+}
+header .Htext{
+    width: 60%;
+}
+header .Htext h1{
+    font-size: 50px;
+    line-height: 1;
+}
+header .Htext p{
+    margin: 20px 0;
+    line-height: 1.5;
+    font-size: 20px;
+}
+header .Htext button{
+    font-size: 20px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 7px;
+    transition: var(--trans-transition);
+
+}
+header .Htext button:hover{
+    background-color: #0867d2;
+}
+header .Himages{
+
+    width: 250px;
+
+}
+header .Himages .himgcon{
+    width: 10%;
+}
+header .Himages img{
+   width: 100px;
+   height: 300px;
+
+}
+
+/* End header */
+
+/*Start Featured */
+.Fboxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.Fboxes .Fbox {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    background-color: #cccccc;
+    padding: 20px;
+    width: 30%;
+    transition: var(--trans-transition);
+}
+.Fboxes .Fbox:hover{
+    background-color: transparent;
+}
+.Fboxes .Fbox i{
+    color: var(--main-color);
+    font-size: 35px;
+    margin: 15px 0;
+
+}
+.Fboxes .Fbox h1{
+    color: var(--main-color);
+    margin: 15px 0;
+    font-size: 22px;
+}
+.Fboxes .Fbox h3{
+    margin: 15px 0;
+    font-size: 20px;
+}
+.Fboxes .Fbox span{
+    color: var(--main-color);
+}
+/*End Featured */
+/* Start New Books */
+.Nboxes{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+.Nboxes .Nbox{
+    position: relative;
+    padding: 15px;
+    text-align: center;
+    width: 23%;
+    background-color: #cccccc;
+}
+.Nboxes .Nbox img{
+    object-fit: contain;
+    width: 150px;
+    height: 170px;
+    margin: 15px 0;
+}
+.Nboxes .Nbox h1{
+    color: var(--main-color);
+    font-size: 23px;
+    margin: 15px;
+
+}
+.Nboxes .Nbox h2{
+    font-size: 21px;
+    margin: 10px;
+}
+.Nboxes .Nbox h2 span{
+    color: var(--main-color);
+}
+.Nboxes .Nbox button{
+    font-size: 17px;
+    background-color: var(--main-color);
+    color: white;
+    border: none;
+    padding: 10px 7px;
+    transition: var(--trans-transition);
+
+}
+.Nboxes .Nbox button:hover{
+    background-color: #0867d2;
+}
+
+.Nboxes .Nbox .Ficons{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: absolute;
+    top:0;
+    right: 0;
+    background-color:#eeeeee;
+    padding: 5px;
+    z-index: -1;
+    transition: var(--trans-transition);
+}
+.Nboxes .Nbox:hover .Ficons{
+    z-index: 2;
+}
+.Nboxes .Nbox .Ficons i{
+    font-size: 28px;
+
+    padding: 3px;
+    transition: var(--trans-transition);
+    color: black;
+}
+.Nboxes .Nbox .Ficons i:hover{
+    color: var(--main-color);
+
+    background-color: #cccccc;
+}
+
+/* End New Books */
+
+/* Start DisCount */
+.discount{
+    display: flex;
+    gap: 10px ;
+    align-items: center;
+}
+.discount .disText{
+    width: 55%;
+}
+.discount .disText h1{
+    font-size: 40px;
+    margin: 15px 0;
+}
+.discount .disText p{
+    font-size: 20px;
+    margin: 15px 0;
+}
+.discount .disText button{
+        font-size: 17px;
+        background-color: var(--main-color);
+        color: white;
+        border: none;
+        padding: 10px 7px;
+        transition: var(--trans-transition);
+        margin: 20px 0;
+
+}
+.discount .disText button:hover{
+        background-color: #0867d2;
+}
+
+
+.discount .disImage{
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+.discount .disImage img{
+    width: 200px;
+    height: 300px;
+}
+.discount .disImage .img1{
+    transform: rotate(-30deg);
+}
+.discount .disImage .img2{
+    transform: rotate(30deg);
+}
+/* End DisCount */
+/* Start Testimoal */
+.testimnial{
+    width: 500px;
+    height: max-content;
+}
+.Tbox{
+text-align: center;
+width: 58%;
+margin: 0 auto;
+background-color:#cccccc;
+
+}
+.Tbox h1{
+    margin: 20px 0;
+}
+.Tbox p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+.Tbox .iconStar{
+    display: flex;
+    gap:  8px;
+    align-items: center;
+    justify-content: center;
+}
+.Tbox .iconStar i {
+    font-size: 25px;
+    color: var(--main-color);
+}
+/* End Testimoal */
+.dark{
+    background-color: black;
+    color: white;
+}
+.dark nav{
+    background-color:rgb(61, 55, 55);
+}
+.dark  nav .nav-search{
+    background-color: #222222;
+}
+.dark nav .nav-search .searchX{
+    color: #eeeeee;
+}
+.dark nav .nav-search .childSearch{
+    color:white;
+}
+.dark nav .login{
+    background-color: black;
+}
+.dark nav .login form{
+    background-color: #222222;
+}
+.dark .Fboxes .Fbox{
+    background-color: #222222;
+}
+.dark .Fboxes .Fbox:hover{
+    background-color: transparent;
+}
+.dark .Nboxes .Nbox{
+    background-color: #222222;
+}
+.dark .Tbox{
+    background-color: #222222;
+}
+
+/* Media */
+@media screen and (max-width : 480px){
+    .container{
+        width: 95%;
+    }
+    .main-tittle{
+       font-size: 30px;
+    }
+    nav{
+        flex-direction: column;
+        justify-content: center;
+    }
+    nav .items ul{
+        gap: 5px;
+        font-size: 15px;
+
+    }
+    nav .nav-search .searchX{
+    right: 50px;
+    }
+    nav .nav-search input{
+    width: 250px;
+    }
+    nav .nav-search .childSearch{
+        left: 15%;
+    }
+    nav .login .loginX{
+        right: 20px;
+    }
+    nav .login form{
+        width: 90%;
+    }
+    header{
+        flex-direction: column;
+    }
+    header .Htext{
+        width: 100%;
+    }
+    .Fboxes{
+        flex-direction: column;
+    }
+    .Fboxes .Fbox{
+        width: 90%;
+    }
+    .Nboxes{
+        flex-wrap: wrap;
+    }
+    .Nboxes .Nbox{
+        width: 40%;
+    }
+    .discount{
+        flex-direction: column;
+    }
+    .discount .disText{
+        width: 100%;
+    }
+    .discount .disImage{
+        width: 80%;
+
+    }
+    .discount .disImage img{
+        width: 120px;
+        height: 220px;
+    }
+    .testimnial{
+        width: 300px;
+    }
+
+
+
+
+
+}
+@media screen and (min-width : 481px) and (max-width : 770px){
+    .container{
+        width: 95%;
+    }
+    .main-tittle{
+       font-size: 30px;
+    }
+    nav{
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+    }
+    nav .nav-search .searchX{
+        right: 50px;
+        }
+    nav .nav-search input{
+        width: 500px;
+        }
+    nav .nav-search .childSearch{
+            left: 13%;
+        }
+    nav .login .loginX{
+            right: 20px;
+        }
+    nav .login form{
+            width: 90%;
+        }
+    .Nboxes .Nbox{
+        width: 27%;
+    }
+    .discount{
+        flex-direction: column;
+    }
+    .discount .disText{
+        width: 90%;
+    }
+}
+@media screen and (min-width : 771px) and (max-width : 1100px){
+    .container{
+        width: 95%;
+    }
+    .main-tittle{
+       font-size: 30px;
+    }
+    nav{
+        flex-direction: column;
+        gap: 25px;
+        justify-content: center;
+    }
+    nav .nav-search .searchX{
+        right: 50px;
+        }
+    nav .nav-search input{
+        width: 500px;
+        }
+    nav .nav-search .childSearch{
+            left: 24%;
+        }
+    nav .login .loginX{
+            right: 20px;
+        }
+    nav .login form{
+            width: 90%;
+        }
+    .Nboxes .Nbox{
+        width: 29%;
+    }
+    .discount{
+        flex-direction: column;
+    }
+    .discount .disText{
+        width: 90%;
+    }
+
+}
